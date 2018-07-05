@@ -1,0 +1,42 @@
+<mat-card-header>
+    <mat-toolbar>
+      <mat-card-title>Book Information</mat-card-title>
+      <span></span>
+    </mat-toolbar>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container">
+      <form [formGroup]= "_bookForm" (submit)="onSubmit()">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <label>Author name</label>
+              <input type="text" formControlName="AuthorName" class="form-control">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+              <label>Date published</label>
+              <input type="date" formControlName="PublishedDate" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label>Book title</label>
+              <input type="text" formControlName="BookTitle" class="form-control">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-6">
+            <button type="button" class="btn btn-success" (click)="onNoClick()">Cancel</button>
+            <button id="submitbtn" type="submit" class="btn btn-success">Edit </button>
+            </div>
+          </div>
+        </div>
+  
+      </form>
+    </div>
+    <div class="row bg-danger">
+        {{errormsg}}
+      </div>
+  </mat-card-content>

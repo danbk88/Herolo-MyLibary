@@ -1,0 +1,9 @@
+.flex-container{
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+}
+
+.flex-container > button{
+    margin: 8px;
+}
