@@ -1,0 +1,49 @@
+.appTitle{
+    height: 10vh;
+    text-align: center;
+    align-items: center;
+    border-bottom: solid;
+    border-bottom-color: rgb(116, 112, 112);
+    border-bottom-width: 3px;   
+}
+
+h5:hover{
+    background-color: #eee;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.table{
+      border-style: solid;
+      border-color: black;
+      border-collapse: collapse;
+}
+
+tr{
+    background:rgb(225, 240, 220);
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+  
+tr.thead{
+    border-style: solid;
+    border-color: black;
+    background: rgb(152, 164, 172);
+}
+.pointer {
+    cursor: pointer;
+}
+
+.tableRow{
+    font-size: calc(6px + 1vw);
+}
+button{
+    font-size: calc(5px + 1vw);
+    width: fit-content;
+    padding: 3px;
+}

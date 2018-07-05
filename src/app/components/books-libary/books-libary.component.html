@@ -1,0 +1,43 @@
+<div class="appTitle">
+  <h1 style="font-size:calc(12px + 1.7vw); padding-top: 10px;">
+    Welcome to my Libary :)
+  </h1>
+</div>
+<div class="container">
+  <span style="font-size:calc(12px + 1.5vw);"><b>Choose a book or Add one: </b></span>
+  <button class="btn btn-success" (click)="AddBook_Clicked()">ADD BOOK</button>
+</div><br>
+<div class="flex-container table-responsive" style="text-align: center">
+  <!-- <div id="table-scroll"> todo -->
+    <div>
+    <table class="table table-bordered" > 
+      <thead >
+        <tr class="thead tableRow">
+          <th>#</th>
+          <th>Book Title</th>
+          <th>Book ID</th>
+          <th>Author</th>
+          <th>Publish Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of booksList; let i = index" class="pointer tableRow">
+          <th>{{ i + 1 }}</th>
+          <td>"{{book.BookTitle | titlecase}}"</td>
+          <td>{{ book.BookID }}</td>
+          <td>{{ book.AuthorName}}</td>
+          <td>{{ book.PublishedDate }}</td>
+          <td>
+            <div class="flex-container">
+              <button class="btn btn-success" (click)="EditBook_Clicked(i)">EDIT</button>
+              &nbsp;
+              <button class="btn btn-success" (click)="DeleteBook_Clicked(i)">DELETE</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+</div>
